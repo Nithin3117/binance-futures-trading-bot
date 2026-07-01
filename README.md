@@ -20,7 +20,25 @@ It is a simple command-line application built using Python that places Market an
 - python-binance
 - python-dotenv
 
-## Running the Project
+## Setup
+
+1. Clone the repository.
+2. Install the required packages using:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Create a `.env` file in the project root and add your Binance Futures Testnet API credentials.
+
+```text
+API_KEY=your_api_key
+API_SECRET=your_api_secret
+```
+
+4. Activate your virtual environment and run the project.
+
+## Run Examples
 
 ### Market Order
 
@@ -34,6 +52,13 @@ python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
 python cli.py --symbol BTCUSDT --side BUY --type LIMIT --quantity 0.001 --price 60000
 ```
 
+## Assumptions
+
+- A Binance Futures Testnet account has already been created.
+- Valid Testnet API Key and Secret Key are available.
+- Futures permission is enabled for the API Key.
+- Python 3 and the required packages are installed.
+
 ## Output
 
 The application displays:
@@ -43,19 +68,11 @@ The application displays:
 - Executed Quantity (if available)
 - Average Price (if available)
 
-All API requests, responses, and errors are saved in `logs/trading.log`.
-
-## Requirements
-
-- Python 3.x
-- Binance Futures Testnet Account
-- Binance Testnet API Key
-- Binance Testnet Secret Key
+API requests, responses, and errors are stored in `logs/trading.log`.
 
 ## Note
 
-- This project works with the Binance Futures Testnet.
-- Create a `.env` file and add your own Testnet API Key and Secret Key.
+- This project works only with the Binance Futures Testnet.
 - The `.env` file is not included in this repository for security reasons.
 
 ## Author
