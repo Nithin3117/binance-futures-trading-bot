@@ -11,8 +11,8 @@ It is a simple command-line application built using Python that places Market an
 - Supports BUY and SELL orders
 - Command-line interface using argparse
 - Input validation
-- Logging of API requests and responses
-- Error handling
+- Logging of API requests, responses, and errors
+- Exception handling
 
 ## Technologies Used
 
@@ -20,56 +20,15 @@ It is a simple command-line application built using Python that places Market an
 - python-binance
 - python-dotenv
 
-## Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/Nithin3117/binance-futures-trading-bot.git
-```
-
-Go to the project folder
-
-```bash
-cd binance-futures-trading-bot
-```
-
-Create a virtual environment
-
-```bash
-python -m venv venv
-```
-
-Activate the virtual environment
-
-**Windows**
-
-```bash
-venv\Scripts\activate
-```
-
-Install the required packages
-
-```bash
-pip install -r requirements.txt
-```
-
-Create a `.env` file in the project folder and add your Binance Testnet API credentials.
-
-```text
-API_KEY=your_api_key
-API_SECRET=your_api_secret
-```
-
 ## Running the Project
 
-### Place a Market Order
+### Market Order
 
 ```bash
 python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
 ```
 
-### Place a Limit Order
+### Limit Order
 
 ```bash
 python cli.py --symbol BTCUSDT --side BUY --type LIMIT --quantity 0.001 --price 60000
@@ -84,20 +43,21 @@ The application displays:
 - Executed Quantity (if available)
 - Average Price (if available)
 
-All API requests, responses, and errors are also saved in `logs/trading.log`.
+All API requests, responses, and errors are saved in `logs/trading.log`.
 
 ## Requirements
 
 - Python 3.x
 - Binance Futures Testnet Account
-- Binance Testnet API Key and Secret Key
+- Binance Testnet API Key
+- Binance Testnet Secret Key
 
 ## Note
 
-- This project is developed for the Binance Futures Testnet.
+- This project works with the Binance Futures Testnet.
+- Create a `.env` file and add your own Testnet API Key and Secret Key.
 - The `.env` file is not included in this repository for security reasons.
-- Use your own Testnet API credentials to run the project.
 
 ## Author
 
-**Nithin**
+**Nithin Bollineni**
