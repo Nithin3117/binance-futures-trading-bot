@@ -2,7 +2,6 @@ import argparse
 
 from bot.orders import place_order
 
-
 def main():
     parser = argparse.ArgumentParser(description="Binance Futures Trading Bot")
 
@@ -21,7 +20,6 @@ def main():
         quantity=args.quantity,
         price=args.price
     )
-
-
+    
 if __name__ == "__main__":
     main()
