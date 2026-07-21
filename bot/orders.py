@@ -4,9 +4,7 @@ from bot.client import get_client
 from bot.validators import validate_order
 from bot.logging_config import logger
 
-
 client = get_client()
-
 
 def place_order(symbol, side, order_type, quantity, price=None):
     try:
