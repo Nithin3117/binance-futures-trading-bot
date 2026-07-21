@@ -17,3 +17,4 @@ def validate_order(symbol, side, order_type, quantity, price=None):
     if order_type == "LIMIT":
         if price is None or price <= 0:
             raise ValueError("Price must be provided for LIMIT orders.")
+            
