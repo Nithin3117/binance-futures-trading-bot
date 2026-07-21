@@ -78,5 +78,3 @@ API requests, responses, and errors are stored in `logs/trading.log`.
 ## Author
 
 **Nithin Bollineni**
-
-sd
